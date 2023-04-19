@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from '../../../assets/logo.png';
 import moment from 'moment';
-import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
+import samad from '../../../assets/samad.jpg'
 
 const Header = () => {
     return (
@@ -20,13 +21,14 @@ const Header = () => {
             </div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                        <Nav className="mx-auto">
+                            <Nav.Link href="#features">Home</Nav.Link>
+                            <Nav.Link href="#pricing">About</Nav.Link>
+                            <Nav.Link href="#pricing">Career</Nav.Link>
+                            <NavDropdown title="" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
@@ -39,9 +41,9 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
+                            <Nav.Link href="#deets"> <Image style={{width: "45px", height: "45px"}} src={samad} roundedCircle/> </Nav.Link>
                             <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
+                            <Button variant="secondary">Login</Button>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
