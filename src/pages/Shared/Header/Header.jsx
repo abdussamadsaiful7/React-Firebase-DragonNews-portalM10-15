@@ -7,7 +7,7 @@ import samad from '../../../assets/samad.jpg'
 
 const Header = () => {
     return (
-        <Container>
+        <Container className='my-5'>
             <div className='text-center mt-4'>
                 <img src={logo} alt='logo' />
                 <p><small>Journalism Without Fear or Favour</small></p>
@@ -18,7 +18,7 @@ const Header = () => {
                 <Marquee className='text-danger fs-5' speed={80}>
                     I can be a React component, multiple React components, or just some text.
                 </Marquee>
-            </div>
+            </div>     
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     
