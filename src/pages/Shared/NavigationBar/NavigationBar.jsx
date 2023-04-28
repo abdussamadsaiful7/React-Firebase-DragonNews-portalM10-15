@@ -7,7 +7,16 @@ import { useContext } from 'react';
 import samad from '../../../assets/samad.jpg'
 
 const NavigationBar = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
+
+    const  handleLogout = ()=>{
+        logOut()
+        .then()
+        .catch(error=>[
+            console.log(error)
+        ])
+    }
+
     return (
         <Container className='my-4 mb-5'>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -38,8 +47,8 @@ const NavigationBar = () => {
                             }
                            
                                 {user ?
-                                    <Button variant="secondary">Logout</Button> :
-                                    <Link to='/login'> <Button variant="secondary">Login</Button></Link>
+                                    <Button className='my-3' onClick={handleLogout} variant="secondary">Logout</Button> :
+                                    <Link to='/login'> <Button className='my-2' variant="secondary">Login</Button></Link>
                                 }
                            
                         </Nav>
